@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>gfx/checked.xpm</file>
+        <file>gfx/flcards.xpm</file>
+    </qresource>
+</RCC>
