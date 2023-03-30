@@ -62,9 +62,11 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
     case QtCriticalMsg:
         Prefix= QObject::tr("Critical");
         Color = Qt::red;
+        break;
     case QtFatalMsg:
         Prefix= QObject::tr("Fatal");
         Color = Qt::red;
+        break;
     }
     log->log(Prefix + QObject::tr(": %1 (%2:%3, %4)").arg(msg).arg(context.file).arg(context.line).arg(context.function),Color,LEVEL_NORMAL);
 }
