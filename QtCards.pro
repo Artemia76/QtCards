@@ -52,4 +52,5 @@ RESOURCES += \
     qtcards.qrc
 
 DISTFILES += \
+    LICENSE \
     README.md

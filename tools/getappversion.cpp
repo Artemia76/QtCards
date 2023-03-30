@@ -1,14 +1,14 @@
 /****************************************************************************
 **
-** Copyright (C) 2017 FSFranceSimulateur team.
-** Contact: https://github.com/ffs2/ffs2play
+** Copyright (C) 2023 NuTyX team.
+** Contact: https://github.com/Artemia76/QtCards
 **
-** FFS2Play is free software; you can redistribute it and/or modify
+** QtCards is free software; you can redistribute it and/or modify
 ** it under the terms of the GNU General Public License as published by
 ** the Free Software Foundation; either version 3 of the License, or
 ** (at your option) any later version.
 **
-** FFS2Play is distributed in the hope that it will be useful,
+** QtCards is distributed in the hope that it will be useful,
 ** but WITHOUT ANY WARRANTY; without even the implied warranty of
 ** MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ** GNU General Public License for more details.
@@ -21,9 +21,9 @@
 ****************************************************************************/
 
 /****************************************************************************
-** getappversion.cpp is part of FF2Play project
+** getappversion.cpp is part of QtCards project
 **
-** This function return current version of ffs2play application with string
+** This function return current version of QtCards application with string
 ** and numeric structure
 ****************************************************************************/
 
