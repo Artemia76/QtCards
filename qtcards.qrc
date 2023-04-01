@@ -2,5 +2,10 @@
     <qresource prefix="/icons">
         <file>gfx/checked.xpm</file>
         <file>gfx/flcards.xpm</file>
+        <file>gfx/sync.svg</file>
+        <file>gfx/update.svg</file>
+        <file>gfx/gears.svg</file>
+        <file>gfx/property.svg</file>
+        <file>gfx/search.svg</file>
     </qresource>
 </RCC>
