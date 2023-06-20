@@ -21,47 +21,36 @@
 ****************************************************************************/
 
 /****************************************************************************
-** mainwindow.cpp is part of QtCards project
+** mainwindow.h is part of QtCards project
 **
 ** This template provide safe thread calls for singletons
 ****************************************************************************/
 
-#include "mainwindow.h"
-#include "./ui_mainwindow.h"
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include<QDebug>
-#include<QTextCharFormat>
+#include <QMainWindow>
 
-#include<tools/version.h>
+#include "tools/clogger.h"
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
+QT_BEGIN_NAMESPACE
+namespace Ui { class MainWindow; }
+QT_END_NAMESPACE
+
+class MainWindow : public QMainWindow
 {
-    ui->setupUi(this);
-    m_log = CLogger::instance();
-    connect(m_log, SIGNAL(fireLog(QString,QColor,CL_DEBUG_LEVEL)),this,SLOT(onLog(QString,QColor,CL_DEBUG_LEVEL)));
-    setWindowIcon(QIcon(":/icons/gfx/flcards.xpm"));
-    m_log->log(tr("Qt Version :") + QT_VERSION_STR,Qt::blue);
-}
+    Q_OBJECT
 
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
+public:
+    MainWindow(QWidget *parent = nullptr);
+    ~MainWindow();
 
-///
-/// \brief MainWindow::onLog
-/// \param Texte
-/// \param pColor
-/// \param pLevel
-///
-/// Redirect Log Text flow to Plain Text Edit on main Window
-///
-void MainWindow::onLog (const QString& pMessage, QColor pColor, CL_DEBUG_LEVEL)
-{
-    QTextCharFormat fmt;
-    fmt.setForeground(QBrush(pColor));
-    ui->pteLogger->mergeCurrentCharFormat(fmt);
-    ui->pteLogger->appendPlainText(pMessage);
-}
+private:
+    Ui::MainWindow* ui;
+    CLogger*        m_log;
+
+private slots:
+    void    onLog(const QString& pMessage,QColor pColor, CL_DEBUG_LEVEL pLevel);
+    void on_actionUpgrade_All_triggered();
+};
+#endif // MAINWINDOW_H
