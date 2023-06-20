@@ -18,4 +18,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
 	cardshelper.h
 
-system(qdbusxml2cpp -a CardsAdaptor -c CardsAdaptor -i cardshelper.h -l CardsHelper org.qt.policykit.qtcards.xml)
+system(qdbusxml2cpp -a cardsadaptor -c CardsAdaptor -i cardshelper.h -l CardsHelper org.qt.policykit.qtcards.xml)
+
+DISTFILES += \
+	org.qt.policykit.qtcards.xml
